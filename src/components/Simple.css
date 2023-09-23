@@ -4,16 +4,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(100, 96, 96);
+    border: 1px solid rgb(189, 185, 185);
     padding: 15px;
-    background-color: rgb(245, 145, 231);
+    background-color: rgb(201, 187, 199);
     border-radius: 10px;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .randomnums {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 .inputans {
     display: flex;
@@ -36,17 +36,32 @@
     outline: none;
     border: none;
 }
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(23, 145, 185);
+}
 .btns .btn {
     padding: 5px 15px;
 }
 
-.checkans{
+.checkans-wrong{
     color: red;
 }
-
+.checkans-correct{
+    color: green;
+}
 @media (max-width: 760px){
     .simple {
         width: 280px;
         
+    }
+
+    input {
+        font-size: 20px;
     }
 }

@@ -11,8 +11,8 @@ const SimpleMath = () => {
 
 
     useEffect(() => {
-        const n1 = Math.floor(Math.random() *10, 1);
-        const n2 = Math.floor(Math.random() *10, 1);
+        const n1 = Math.floor(Math.random() *100, 1);
+        const n2 = Math.floor(Math.random() *100, 1);
 
         setNum1(n1)
         setNum2(n2)
@@ -31,19 +31,21 @@ const SimpleMath = () => {
     }
 
     const handleNextbutton = () => {
-        const n1 = Math.floor(Math.random() *10, 1);
-        const n2 = Math.floor(Math.random() *10, 1);
+        const n1 = Math.floor(Math.random() *100, 1);
+        const n2 = Math.floor(Math.random() *100, 1);
         setNum1(n1)
-        setNum2(n2)
+        setNum2(n2);
+        setAnser('')
+        setInputAns('')
     }
 
 
     return (
         <div className='simple'>
             <div className="randomnums">
-                <h2>{num1}</h2>
-                <h2>+</h2>
-                <h2>{num2}</h2>
+                <h1>{num1}</h1>
+                <h1>+</h1>
+                <h1>{num2}</h1>
             </div>
             <div className="inputans">
                 <input 
@@ -52,13 +54,21 @@ const SimpleMath = () => {
                     value={inputAns}
                     onChange={(e) => setInputAns(e.target.value)}
                 />
-                <button className='btn' onClick={handleCheckAnswer}>Click</button>
+                <button className='btn' onClick={handleCheckAnswer}>Check</button>
             </div>
             <div className="timer">
-                <h2>time</h2>
+                timer - coming soon
             </div>
             <div className="checkans">
-                <h1>{answer}</h1>
+                {
+                    answer === 'correct' ? (
+                        <h1 className='checkans-correct'>{answer}</h1>
+                    ):
+                    (
+                        <h1 className='checkans-wrong'>{answer}</h1>
+                    )
+                }
+                
             </div>
             <div className="btns">
                 <button className='btn' onClick={handleNextbutton}>Next</button>
