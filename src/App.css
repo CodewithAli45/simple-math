@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(219, 190, 219);
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
